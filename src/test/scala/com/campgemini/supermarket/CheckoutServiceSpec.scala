@@ -47,4 +47,15 @@ class CheckoutServiceSpec extends FlatSpec with Matchers {
 
   }
 
+  "CheckoutService" should "return 110 for List with 3 Oranges and 2 Apples" in {
+
+    CheckoutService getTotalShoppingBill List("Orange", "Orange", "Orange", "Apple", "Apple") shouldEqual 110
+
+  }
+
+    "CheckoutService" should "return 120 for List with 4 Apples" in {
+
+    CheckoutService getTotalShoppingBill List( "Apple", "Apple",  "Apple", "Apple") shouldEqual 120
+
+  }
 }
