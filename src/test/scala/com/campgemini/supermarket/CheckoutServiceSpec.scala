@@ -12,5 +12,11 @@ class CheckoutServiceSpec extends FlatSpec with Matchers {
   }
   
   
+   "CheckoutService" should "return Zero for null List" in {
+    
+    CheckoutService getTotalShoppingBill  null  shouldEqual  0  
+    
+  }
+  
   
 }
