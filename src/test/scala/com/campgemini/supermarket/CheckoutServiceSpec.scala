@@ -1,4 +1,4 @@
-package example
+package com.campgemini.supermarket
 
 import org.scalatest.FlatSpec
 import org.scalatest._
@@ -23,5 +23,17 @@ class CheckoutServiceSpec extends FlatSpec with Matchers {
     CheckoutService getTotalShoppingBill  List("Apple")  shouldEqual  60
     
   }
+   
+   "CheckoutService" should "return 25 for List with 1 Orange only" in {
+    
+    CheckoutService getTotalShoppingBill  List("Orange")  shouldEqual  25
+    
+  }
+   
+
+  
+
+     
+  
 
 }
